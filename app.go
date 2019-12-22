@@ -101,7 +101,7 @@ func fetchCondition() (RoomCondition, error) {
 func recordCondition(condition *RoomCondition) {
 	// Use a service account
 	ctx := context.Background()
-	sa := option.WithCredentialsFile("./home-condition-95292-firebase-adminsdk-w6fwj-1309c00ba3.json")
+	sa := option.WithCredentialsFile("./credential.json")
 	app, err := firebase.NewApp(ctx, nil, sa)
 	if err != nil {
 		log.Fatalln(err)
